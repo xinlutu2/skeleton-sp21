@@ -1,8 +1,8 @@
 package deque;
 
 import org.junit.Test;
+import java.util.Optional;
 import static org.junit.Assert.*;
-
 
 /** Performs some basic linked list tests. */
 public class LinkedListDequeTest {
@@ -38,6 +38,13 @@ public class LinkedListDequeTest {
         assertEquals(1, deque.size());
         assertFalse("lld1 should now contain 1 item", deque.isEmpty());
         assertEquals("front", deque.get(0));
+    }
+
+    @Test
+    public void linkedListDequeGetTest() {
+        LinkedListDeque<Integer> deque = new LinkedListDeque<>(1);
+        assertEquals(1, deque.size());
+        assertEquals(Integer.valueOf(1), deque.get(0));
     }
 
     @Test
