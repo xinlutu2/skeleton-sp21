@@ -82,6 +82,9 @@ public class LinkedListDeque<T> implements Iterable<T> {
     }
 
     public T removeFirst() {
+        if (size == 0) {
+            return null;
+        }
         if (sentinel.next == null) {
             return null;
         }
@@ -94,6 +97,9 @@ public class LinkedListDeque<T> implements Iterable<T> {
     }
 
     public T removeLast() {
+        if (size == 0) {
+            return null;
+        }
         if (sentinel.prev == null) {
             return null;
         }
