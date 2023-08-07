@@ -85,11 +85,11 @@ public class ArrayDeque<T> implements Iterable<T> {
     }
 
     public T removeFirst() {
-        T x = items[front];
+        T removed = items[front];
         items[front] = null;
         front = (front + 1) % CAPACITY;
         size = size - 1;
-        return x;
+        return removed;
     }
 
     public T get(int i) {
@@ -97,11 +97,11 @@ public class ArrayDeque<T> implements Iterable<T> {
     }
 
     public T removeLast() {
-        T x = items[back];
+        T removed = items[back];
         items[back] = null;
         back = (CAPACITY + back - 1) % CAPACITY;
         size = size - 1;
-        return x;
+        return removed;
     }
 
     @Override
